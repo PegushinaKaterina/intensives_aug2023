@@ -15,5 +15,6 @@ public class Main {
         Task9ReverseList.selfCheck();
         Task11BiggestSubarraySum.selfCheck();
         Task12Spiral.selfCheck();
+        Task13MergeSort.selfCheck();
     }
 }
