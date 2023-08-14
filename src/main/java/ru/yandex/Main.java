@@ -14,5 +14,6 @@ public class Main {
         Task8BinarySearch.selfCheck();
         Task9ReverseList.selfCheck();
         Task11BiggestSubarraySum.selfCheck();
+        Task12Spiral.selfCheck();
     }
 }

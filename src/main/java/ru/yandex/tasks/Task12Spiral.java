@@ -10,7 +10,34 @@ public class Task12Spiral {
          * Выход: массив со спиралью
          */
         // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
-        return null;
+        int[][] arr = new int[N][N];
+        int number = 1;
+        int n = N - 1;
+        for (int i = n; i > n / 2; i--) {
+            int j = n - i;
+            for (int k = j; k < i; k++) {
+                arr[j][k] = number;
+                number++;
+            }
+            for (int k = j; k < i; k++) {
+                arr[k][i] = number;
+                number++;
+            }
+            for (int k = i; k > j; k--) {
+                arr[i][k] = number;
+                number++;
+            }
+            for (int k = i; k > j; k--) {
+                arr[k][j] = number;
+                number++;
+            }
+        }
+
+        if (N % 2 == 1) {
+            arr[n/2][n/2] = number;
+        }
+
+        return arr;
     }
 
     public static void selfCheck() {
