@@ -10,7 +10,25 @@ public class Task3InsertionSort {
          * Выход: отсортированный (сортировкой вставками!) numbers
          */
         // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
-        return null;
+        ArrayList<Integer> sortedNumbers = new ArrayList<>();
+
+        for (Integer number : numbers) {
+            boolean wasAdded = false;
+            int j = 0;
+            while (!wasAdded && j < sortedNumbers.size()) {
+                if (number < sortedNumbers.get(j)) {
+                    sortedNumbers.add(j, number);
+                    wasAdded = true;
+                }
+                j++;
+            }
+
+            if (!wasAdded) {
+                sortedNumbers.add(number);
+            }
+
+        }
+        return sortedNumbers;
     }
 
     public static void selfCheck() {
