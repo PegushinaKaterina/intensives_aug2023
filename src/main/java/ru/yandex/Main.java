@@ -10,5 +10,6 @@ public class Main {
         Task4DFS.selfCheck();
         Task5BFS.selfCheck();
         Task6BraceBalance.selfCheck();
+        Task7PrimeNumbers.selfCheck();
     }
 }
