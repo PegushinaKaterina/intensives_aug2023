@@ -9,6 +9,20 @@ public class Task8BinarySearch {
          * Если таких i несколько, вывести наибольший
          */
         // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+
+        int l = 0, r = sortedList.length - 1;
+        while (l < r) {
+            int mid = r - (r - l) / 2;
+            if (sortedList[mid] > number) {
+                r = mid - 1;
+            } else {
+                l = mid;
+            }
+        }
+
+        if(sortedList[l] == number) {
+            return l;
+        }
         return -1;
     }
 
