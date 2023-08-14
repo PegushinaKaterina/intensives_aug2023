@@ -19,7 +19,7 @@ public class Task7PrimeNumbers {
                 primes.add(i);
                 numbers[i] = 0;
 
-                int current = i;
+                int current = i * i;
                 while (current < n) {
                     numbers[current] = 0;
                     current += i;
