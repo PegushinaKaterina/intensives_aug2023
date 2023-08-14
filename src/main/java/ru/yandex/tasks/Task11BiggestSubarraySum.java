@@ -10,7 +10,7 @@ public class Task11BiggestSubarraySum {
          */
         // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 
-        int sum = 0, maxSum = numbers[0], l = 0, r = 0;
+        int sum = 0, maxSum = numbers[0], l = 0, r;
         Subarray subarray = new Subarray();
         for (int i = 0; i < numbers.length; i++) {
             sum += numbers[i];
@@ -23,7 +23,6 @@ public class Task11BiggestSubarraySum {
 
             if (sum < 0) {
                 l = i + 1;
-                r = i + 1;
                 sum = 0;
             }
         }
