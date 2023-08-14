@@ -10,16 +10,21 @@ public class Task1BubbleSort {
          * Выход: отсортированный (сортировкой пузырьком!) numbers
          */
         // (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ WRITE CODE HERE (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+        int i = 0;
+        boolean wasChange = true;
+        while (wasChange && i < numbers.size()) {
+            wasChange = false;
 
-        for(int i = 0; i < numbers.size(); i++) {
             for (int j = i + 1; j < numbers.size(); j++) {
                 int a = numbers.get(i);
                 int b = numbers.get(j);
                 if (a > b) {
                     numbers.set(i, b);
                     numbers.set(j, a);
+                    wasChange = true;
                 }
             }
+            i++;
         }
         return numbers;
     }
